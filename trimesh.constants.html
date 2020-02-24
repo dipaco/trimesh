@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.constants module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.convex module" href="trimesh.convex.html" />
+    <link rel="prev" title="trimesh.comparison module" href="trimesh.comparison.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.boolean.html">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.caching.html">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.convex.html">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.geometry.html">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.registration.html">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.constants module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.constants.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.constants">
+<span id="trimesh-constants-module"></span><h1>trimesh.constants module<a class="headerlink" href="#module-trimesh.constants" title="Permalink to this headline">¶</a></h1>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.constants.ResolutionPath" title="trimesh.constants.ResolutionPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResolutionPath</span></code></a>(**kwargs)</p></td>
+<td><p>res.seg_frac: when discretizing curves, what percentage of the drawing</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.constants.ToleranceMesh" title="trimesh.constants.ToleranceMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ToleranceMesh</span></code></a>(**kwargs)</p></td>
+<td><p>ToleranceMesh objects hold tolerance information about meshes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.constants.TolerancePath" title="trimesh.constants.TolerancePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TolerancePath</span></code></a>(**kwargs)</p></td>
+<td><p>TolerancePath objects contain tolerance information used in Path objects.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.constants.log_time" title="trimesh.constants.log_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_time</span></code></a>(method)</p></td>
+<td><p>A decorator for methods which will time the method and then emit a log.debug message with the method name and how long it took to execute.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.constants.ResolutionPath">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.constants.</code><code class="sig-name descname">ResolutionPath</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.constants.ResolutionPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>res.seg_frac: when discretizing curves, what percentage of the drawing</dt><dd><p>scale should we aim to make a single segment</p>
+</dd>
+</dl>
+<p>res.seg_angle: when discretizing curves, what angle should a section span
+res.max_sections: when discretizing splines, what is the maximum number</p>
+<blockquote>
+<div><p>of segments per control point</p>
+</div></blockquote>
+<dl class="simple">
+<dt>res.min_sections: when discretizing splines, what is the minimum number</dt><dd><p>of segments per control point</p>
+</dd>
+</dl>
+<p>res.export: format string to use when exporting floating point vertices</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.constants.ToleranceMesh">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.constants.</code><code class="sig-name descname">ToleranceMesh</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.constants.ToleranceMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ToleranceMesh objects hold tolerance information about meshes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tol.zero</strong> (<em>float</em>) – Floating point numbers smaller than this are considered zero</p></li>
+<li><p><strong>tol.merge</strong> (<em>float</em>) – When merging vertices, consider vertices closer than this
+to be the same vertex. Here we use the same value (1e-8)
+as SolidWorks uses, according to their documentation.</p></li>
+<li><p><strong>tol.planar</strong> (<em>float</em>) – The maximum distance from a plane a point can be and
+still be considered to be on the plane</p></li>
+<li><p><strong>tol.facet_threshold</strong> (<em>float</em>) – Threshold for two facets to be considered coplanar</p></li>
+<li><p><strong>tol.strict</strong> (<em>bool</em>) – If True, run additional in- process checks (slower)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.constants.TolerancePath">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.constants.</code><code class="sig-name descname">TolerancePath</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.constants.TolerancePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TolerancePath objects contain tolerance information used in
+Path objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tol.zero</strong> (<em>float</em>) – Floating point numbers smaller than this are considered zero</p></li>
+<li><p><strong>tol.merge</strong> (<em>float</em>) – When merging vertices, consider vertices closer than this
+to be the same vertex. Here we use the same value (1e-8)
+as SolidWorks uses, according to their documentation.</p></li>
+<li><p><strong>tol.planar</strong> (<em>float</em>) – The maximum distance from a plane a point can be and
+still be considered to be on the plane</p></li>
+<li><p><strong>tol.seg_frac</strong> (<em>float</em>) – <dl class="simple">
+<dt>When simplifying line segments what percentage of the drawing</dt><dd><p>scale can a segment be and have a curve fitted</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>tol.seg_angle</strong> (<em>when simplifying line segments to arcs</em><em>, </em><em>what angle</em>) – can a segment span to be acceptable.</p></li>
+<li><p><strong>tol.aspect_frac</strong> (<em>when simplifying line segments to closed arcs</em><em> (</em><em>circles</em><em>)</em>) – what percentage can the aspect ratio differfrom 1:1
+before escaping the fit early</p></li>
+<li><p><strong>tol.radius_frac</strong> (<em>when simplifying line segments to arcs</em><em>, </em><em>what percentage</em>) – of the fit radius can vertices deviate to be acceptable</p></li>
+<li><p><strong>tol.radius_min</strong> (<em>when simplifying line segments to arcs</em><em>, </em><em>what is the minimum</em>) – radius multiplied by document scale for an acceptable fit</p></li>
+<li><p><strong>tol.radius_max</strong> (<em>when simplifying line segments to arcs</em><em>, </em><em>what is the maximum</em>) – radius multiplied by document scale for an acceptable fit</p></li>
+<li><p><strong>tol.tangent</strong> (<em>when simplifying line segments to curves</em><em>, </em><em>what is the maximum</em>) – angle the end sections can deviate from tangent that is acceptable.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.constants.log_time">
+<code class="sig-prename descclassname">trimesh.constants.</code><code class="sig-name descname">log_time</code><span class="sig-paren">(</span><em class="sig-param">method</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.constants.log_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A decorator for methods which will time the method
+and then emit a log.debug message with the method name
+and how long it took to execute.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.convex.html" class="btn btn-neutral float-right" title="trimesh.convex module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.comparison.html" class="btn btn-neutral float-left" title="trimesh.comparison module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

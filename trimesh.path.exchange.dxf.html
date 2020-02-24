@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.path.exchange.dxf module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.path.exchange.export module" href="trimesh.path.exchange.export.html" />
+    <link rel="prev" title="trimesh.path.exchange package" href="trimesh.path.exchange.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.path.html">trimesh.path package</a> &raquo;</li>
+        
+          <li><a href="trimesh.path.exchange.html">trimesh.path.exchange package</a> &raquo;</li>
+        
+      <li>trimesh.path.exchange.dxf module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.path.exchange.dxf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.path.exchange.dxf">
+<span id="trimesh-path-exchange-dxf-module"></span><h1>trimesh.path.exchange.dxf module<a class="headerlink" href="#module-trimesh.path.exchange.dxf" title="Permalink to this headline">¶</a></h1>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.exchange.dxf.bulge_to_arcs" title="trimesh.path.exchange.dxf.bulge_to_arcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulge_to_arcs</span></code></a>(lines, bulge, bulge_idx[, …])</p></td>
+<td><p>Polylines can have “vertex bulge,” which means the polyline has an arc tangent to segments, rather than meeting at a vertex.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.exchange.dxf.export_dxf" title="trimesh.path.exchange.dxf.export_dxf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_dxf</span></code></a>(path[, layers])</p></td>
+<td><p>Export a 2D path object to a DXF file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.exchange.dxf.get_key" title="trimesh.path.exchange.dxf.get_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_key</span></code></a>(blob, field, code)</p></td>
+<td><p>Given a loaded (n, 2) blob and a field name get a value by code.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.exchange.dxf.load_dwg" title="trimesh.path.exchange.dxf.load_dwg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_dwg</span></code></a>(file_obj, **kwargs)</p></td>
+<td><p>Load DWG files by converting them to DXF files using TeighaFileConverter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.exchange.dxf.load_dxf" title="trimesh.path.exchange.dxf.load_dxf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_dxf</span></code></a>(file_obj, **kwargs)</p></td>
+<td><p>Load a DXF file to a dictionary containing vertices and entities.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.path.exchange.dxf.bulge_to_arcs">
+<code class="sig-prename descclassname">trimesh.path.exchange.dxf.</code><code class="sig-name descname">bulge_to_arcs</code><span class="sig-paren">(</span><em class="sig-param">lines</em>, <em class="sig-param">bulge</em>, <em class="sig-param">bulge_idx</em>, <em class="sig-param">is_closed=False</em>, <em class="sig-param">metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.exchange.dxf.bulge_to_arcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Polylines can have “vertex bulge,” which means the polyline
+has an arc tangent to segments, rather than meeting at a
+vertex.</p>
+<p>From Autodesk reference:
+The bulge is the tangent of one fourth the included
+angle for an arc segment, made negative if the arc
+goes clockwise from the start point to the endpoint.
+A bulge of 0 indicates a straight segment, and a
+bulge of 1 is a semicircle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lines</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>float</em>) – Polyline vertices in order</p></li>
+<li><p><strong>bulge</strong> (<em>(</em><em>m</em><em>,</em><em>) </em><em>float</em>) – Vertex bulge value</p></li>
+<li><p><strong>bulge_idx</strong> (<em>(</em><em>m</em><em>,</em><em>) </em><em>float</em>) – Which index of lines is bulge associated with</p></li>
+<li><p><strong>is_closed</strong> (<em>bool</em>) – Is segment closed</p></li>
+<li><p><strong>metadata</strong> (<em>None</em><em>, or </em><em>dict</em>) – Entity metadata to add</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>vertices</strong> (<em>(a, 2) float</em>) – New vertices for poly-arc</p></li>
+<li><p><strong>entities</strong> (<em>(b,) entities.Entity</em>) – New entities, either line or arc</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.exchange.dxf.export_dxf">
+<code class="sig-prename descclassname">trimesh.path.exchange.dxf.</code><code class="sig-name descname">export_dxf</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">layers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.exchange.dxf.export_dxf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a 2D path object to a DXF file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference internal" href="trimesh.path.path.html#trimesh.path.path.Path2D" title="trimesh.path.path.Path2D"><em>trimesh.path.path.Path2D</em></a>) – Input geometry to export</p></li>
+<li><p><strong>layers</strong> (<em>None</em><em>, </em><em>set</em><em> or </em><em>iterable</em>) – If passed only export the layers specified</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>export</strong> – Path formatted as a DXF file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.exchange.dxf.get_key">
+<code class="sig-prename descclassname">trimesh.path.exchange.dxf.</code><code class="sig-name descname">get_key</code><span class="sig-paren">(</span><em class="sig-param">blob</em>, <em class="sig-param">field</em>, <em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.exchange.dxf.get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a loaded (n, 2) blob and a field name
+get a value by code.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.exchange.dxf.load_dwg">
+<code class="sig-prename descclassname">trimesh.path.exchange.dxf.</code><code class="sig-name descname">load_dwg</code><span class="sig-paren">(</span><em class="sig-param">file_obj</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.exchange.dxf.load_dwg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load DWG files by converting them to DXF files using
+TeighaFileConverter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_obj</strong> (<em>file- like object</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>loaded</strong> – kwargs for a Path2D constructor</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.exchange.dxf.load_dxf">
+<code class="sig-prename descclassname">trimesh.path.exchange.dxf.</code><code class="sig-name descname">load_dxf</code><span class="sig-paren">(</span><em class="sig-param">file_obj</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.exchange.dxf.load_dxf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a DXF file to a dictionary containing vertices and
+entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_obj</strong> (<em>file</em><em> or </em><em>file- like object</em><em> (</em><em>has object.read method</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict, keys are  entities, vertices and metadata</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.path.exchange.export.html" class="btn btn-neutral float-right" title="trimesh.path.exchange.export module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.path.exchange.html" class="btn btn-neutral float-left" title="trimesh.path.exchange package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

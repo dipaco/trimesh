@@ -1,0 +1,21 @@
+trimesh.interfaces package
+==========================
+
+Submodules
+----------
+
+.. toctree::
+
+   trimesh.interfaces.blender
+   trimesh.interfaces.generic
+   trimesh.interfaces.gmsh
+   trimesh.interfaces.scad
+   trimesh.interfaces.vhacd
+
+Module contents
+---------------
+
+.. automodule:: trimesh.interfaces
+   :members:
+   :undoc-members:
+   :show-inheritance:

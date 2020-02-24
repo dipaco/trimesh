@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.visual package &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.visual.color module" href="trimesh.visual.color.html" />
+    <link rel="prev" title="trimesh.viewer.windowed module" href="trimesh.viewer.windowed.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.visual package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.visual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trimesh-visual-package">
+<h1>trimesh.visual package<a class="headerlink" href="#trimesh-visual-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.visual.color.html">trimesh.visual.color module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trimesh.visual.color.html#color-py">color.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trimesh.visual.color.html#rules">Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.visual.material.html">trimesh.visual.material module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trimesh.visual.material.html#material-py">material.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.visual.objects.html">trimesh.visual.objects module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trimesh.visual.objects.html#objects-py">objects.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.visual.resolvers.html">trimesh.visual.resolvers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trimesh.visual.resolvers.html#resolvers-py">resolvers.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trimesh.visual.texture.html">trimesh.visual.texture module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-trimesh.visual">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-trimesh.visual" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="visual">
+<h3>visual<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
+<p>Handle visual properties for meshes, including color and texture</p>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals" title="trimesh.visual.TextureVisuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextureVisuals</span></code></a>([uv, material, image])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals" title="trimesh.visual.ColorVisuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ColorVisuals</span></code></a>([mesh, face_colors, vertex_colors])</p></td>
+<td><p>Store color information about a mesh.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.random_color" title="trimesh.visual.random_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_color</span></code></a>([dtype])</p></td>
+<td><p>Return a random RGB color using datatype specified.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.to_rgba" title="trimesh.visual.to_rgba"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_rgba</span></code></a>(colors[, dtype])</p></td>
+<td><p>Convert a single or multiple RGB colors to RGBA colors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.create_visual" title="trimesh.visual.create_visual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_visual</span></code></a>(**kwargs)</p></td>
+<td><p>Create Visuals object from keyword arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.interpolate" title="trimesh.visual.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code></a>(values[, color_map, dtype])</p></td>
+<td><p>Given a 1D list of values, return interpolated colors for the range.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.linear_color_map" title="trimesh.visual.linear_color_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_color_map</span></code></a>(values[, color_range])</p></td>
+<td><p>Linearly interpolate between two colors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.uv_to_color" title="trimesh.visual.uv_to_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv_to_color</span></code></a>(uv, image)</p></td>
+<td><p>Get the color in a texture image.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.visual.TextureVisuals">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">TextureVisuals</code><span class="sig-paren">(</span><em class="sig-param">uv=None</em>, <em class="sig-param">material=None</em>, <em class="sig-param">image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.copy" title="trimesh.visual.TextureVisuals.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Return a copy of the current TextureVisuals object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.crc" title="trimesh.visual.TextureVisuals.crc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crc</span></code></a>()</p></td>
+<td><p>Get a CRC of the stored data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.face_subset" title="trimesh.visual.TextureVisuals.face_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_subset</span></code></a>(face_index)</p></td>
+<td><p>Get a copy of</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.to_color" title="trimesh.visual.TextureVisuals.to_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_color</span></code></a>()</p></td>
+<td><p>Convert textured visuals to a ColorVisuals with vertex color calculated from texture.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.update_faces" title="trimesh.visual.TextureVisuals.update_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_faces</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate face properties</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.update_vertices" title="trimesh.visual.TextureVisuals.update_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_vertices</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate vertex properties.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.defined" title="trimesh.visual.TextureVisuals.defined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defined</span></code></a></p></td>
+<td><p>Check if any data is stored</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.kind" title="trimesh.visual.TextureVisuals.kind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kind</span></code></a></p></td>
+<td><p>Return the type of visual data stored</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.TextureVisuals.uv" title="trimesh.visual.TextureVisuals.uv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv</span></code></a></p></td>
+<td><p>Get the stored UV coordinates.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current TextureVisuals object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>copied</strong> – Contains the same information in a new object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#trimesh.visual.TextureVisuals" title="trimesh.visual.TextureVisuals">TextureVisuals</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.crc">
+<code class="sig-name descname">crc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.crc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a CRC of the stored data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>crc</strong> – Hash of items in self._data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.defined">
+<em class="property">property </em><code class="sig-name descname">defined</code><a class="headerlink" href="#trimesh.visual.TextureVisuals.defined" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if any data is stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>defined</strong> – Are UV coordinates and images set?</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.face_subset">
+<code class="sig-name descname">face_subset</code><span class="sig-paren">(</span><em class="sig-param">face_index</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.face_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.kind">
+<em class="property">property </em><code class="sig-name descname">kind</code><a class="headerlink" href="#trimesh.visual.TextureVisuals.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of visual data stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>kind</strong> – What type of visuals are defined</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.to_color">
+<code class="sig-name descname">to_color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.to_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert textured visuals to a ColorVisuals with vertex
+color calculated from texture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>vis</strong> – Contains vertex color from texture</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>trimesh.visuals.ColorVisuals</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.update_faces">
+<code class="sig-name descname">update_faces</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.update_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate face properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.update_vertices">
+<code class="sig-name descname">update_vertices</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.TextureVisuals.update_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate vertex properties.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.TextureVisuals.uv">
+<em class="property">property </em><code class="sig-name descname">uv</code><a class="headerlink" href="#trimesh.visual.TextureVisuals.uv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stored UV coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>uv</strong> – Pixel position per- vertex</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(n, 2) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.visual.ColorVisuals">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">ColorVisuals</code><span class="sig-paren">(</span><em class="sig-param">mesh=None</em>, <em class="sig-param">face_colors=None</em>, <em class="sig-param">vertex_colors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Store color information about a mesh.</p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.concatenate" title="trimesh.visual.ColorVisuals.concatenate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">concatenate</span></code></a>(other, *args)</p></td>
+<td><p>Concatenate two or more ColorVisuals objects into a single object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.copy" title="trimesh.visual.ColorVisuals.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Return a copy of the current ColorVisuals object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.crc" title="trimesh.visual.ColorVisuals.crc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crc</span></code></a>()</p></td>
+<td><p>A checksum for the current visual object and its parent mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.face_subset" title="trimesh.visual.ColorVisuals.face_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_subset</span></code></a>(face_index)</p></td>
+<td><p>Given a mask of face indices, return a sliced version.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.update_faces" title="trimesh.visual.ColorVisuals.update_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_faces</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate face properties</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.update_vertices" title="trimesh.visual.ColorVisuals.update_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_vertices</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate vertex properties.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.defined" title="trimesh.visual.ColorVisuals.defined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defined</span></code></a></p></td>
+<td><p>Are any colors defined for the current mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.face_colors" title="trimesh.visual.ColorVisuals.face_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_colors</span></code></a></p></td>
+<td><p>Colors defined for each face of a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.kind" title="trimesh.visual.ColorVisuals.kind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kind</span></code></a></p></td>
+<td><p>What color mode has been set.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.main_color" title="trimesh.visual.ColorVisuals.main_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main_color</span></code></a></p></td>
+<td><p>What is the most commonly occurring color.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.transparency" title="trimesh.visual.ColorVisuals.transparency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transparency</span></code></a></p></td>
+<td><p>Does the current object contain any transparency.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.ColorVisuals.vertex_colors" title="trimesh.visual.ColorVisuals.vertex_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_colors</span></code></a></p></td>
+<td><p>Return the colors for each vertex of a mesh</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.concatenate">
+<code class="sig-name descname">concatenate</code><span class="sig-paren">(</span><em class="sig-param">other</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.concatenate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate two or more ColorVisuals objects into a single object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other</strong> (<a class="reference internal" href="#trimesh.visual.ColorVisuals" title="trimesh.visual.ColorVisuals"><em>ColorVisuals</em></a>) – Object to append</p></li>
+<li><p><strong>*args</strong> (<em>ColorVisuals objects</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> – object and others in the order it was passed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ColorVisuals object containing information from current</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current ColorVisuals object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>copied</strong> – Contains the same information as self</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#trimesh.visual.ColorVisuals" title="trimesh.visual.ColorVisuals">ColorVisuals</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.crc">
+<code class="sig-name descname">crc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.crc" title="Permalink to this definition">¶</a></dt>
+<dd><p>A checksum for the current visual object and its parent mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>crc</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int, checksum of data in visual object and its parent mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.defined">
+<em class="property">property </em><code class="sig-name descname">defined</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.defined" title="Permalink to this definition">¶</a></dt>
+<dd><p>Are any colors defined for the current mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>defined</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool, are colors defined or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.face_colors">
+<em class="property">property </em><code class="sig-name descname">face_colors</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.face_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Colors defined for each face of a mesh.</p>
+<p>If no colors are defined, defaults are returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>colors</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(len(mesh.faces), 4) uint8, RGBA color for each face</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.face_subset">
+<code class="sig-name descname">face_subset</code><span class="sig-paren">(</span><em class="sig-param">face_index</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.face_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a mask of face indices, return a sliced version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>face_index</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>int</em><em>, </em><em>mask for faces</em>) – (n,) bool, mask for faces</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>visual</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ColorVisuals object containing a subset of faces.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.kind">
+<em class="property">property </em><code class="sig-name descname">kind</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>What color mode has been set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mode</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>‘face’, ‘vertex’, or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.main_color">
+<em class="property">property </em><code class="sig-name descname">main_color</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.main_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>What is the most commonly occurring color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>color</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(4,) uint8, most common color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.transparency">
+<em class="property">property </em><code class="sig-name descname">transparency</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.transparency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the current object contain any transparency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>transparency</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool, does the current visual contain transparency</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.update_faces">
+<code class="sig-name descname">update_faces</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.update_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate face properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.update_vertices">
+<code class="sig-name descname">update_vertices</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.ColorVisuals.update_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate vertex properties.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.ColorVisuals.vertex_colors">
+<em class="property">property </em><code class="sig-name descname">vertex_colors</code><a class="headerlink" href="#trimesh.visual.ColorVisuals.vertex_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the colors for each vertex of a mesh</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>colors</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(len(mesh.vertices), 4) uint8, color for each vertex</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.random_color">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">random_color</code><span class="sig-paren">(</span><em class="sig-param">dtype=&lt;class 'numpy.uint8'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.random_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random RGB color using datatype specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dtype</strong> (<em>numpy dtype of result</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>color</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(4,) dtype, random color that looks OK</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.to_rgba">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">to_rgba</code><span class="sig-paren">(</span><em class="sig-param">colors</em>, <em class="sig-param">dtype=&lt;class 'numpy.uint8'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.to_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a single or multiple RGB colors to RGBA colors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>colors</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>array</em>) – RGB or RGBA colors</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>colors</strong> – (4,)  single RGBA color</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 4) list of RGBA colors</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.create_visual">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">create_visual</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.create_visual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Visuals object from keyword arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face_colors</strong> (<em>(</em><em>n</em><em>,</em><em>3|4</em><em>) </em><em>uint8</em><em>, </em><em>colors</em>) – </p></li>
+<li><p><strong>vertex_colors</strong> (<em>(</em><em>n</em><em>,</em><em>3|4</em><em>) </em><em>uint8</em><em>, </em><em>colors</em>) – </p></li>
+<li><p><strong>mesh</strong> (<em>Trimesh object</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>visuals</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ColorVisuals object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.interpolate">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">values</em>, <em class="sig-param">color_map=None</em>, <em class="sig-param">dtype=&lt;class 'numpy.uint8'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a 1D list of values, return interpolated colors
+for the range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>(</em><em>n</em><em>, </em><em>) </em><em>float</em>) – Values to be interpolated over</p></li>
+<li><p><strong>color_map</strong> (<em>None</em><em>, or </em><em>str</em>) – Key to a colormap contained in:
+matplotlib.pyplot.colormaps()
+e.g: ‘viridis’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>interpolated</strong> – Interpolated RGBA colors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 4) dtype</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.linear_color_map">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">linear_color_map</code><span class="sig-paren">(</span><em class="sig-param">values</em>, <em class="sig-param">color_range=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.linear_color_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linearly interpolate between two colors.</p>
+<p>If colors are not specified the function will
+interpolate between  0.0 values as red and 1.0 as green.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>(</em><em>n</em><em>, </em><em>) </em><em>float</em>) – Values to interpolate</p></li>
+<li><p><strong>color_range</strong> (<em>None</em><em>, or </em><em>(</em><em>2</em><em>, </em><em>4</em><em>) </em><em>uint8</em>) – What colors should extrema be set to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>colors</strong> – RGBA colors for interpolated values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 4) uint8</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.uv_to_color">
+<code class="sig-prename descclassname">trimesh.visual.</code><code class="sig-name descname">uv_to_color</code><span class="sig-paren">(</span><em class="sig-param">uv</em>, <em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.uv_to_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the color in a texture image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uv</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>float</em>) – UV coordinates on texture image</p></li>
+<li><p><strong>image</strong> (<em>PIL.Image</em>) – Texture image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>colors</strong> – RGBA color at each of the UV coordinates</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 4) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.visual.color.html" class="btn btn-neutral float-right" title="trimesh.visual.color module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.viewer.windowed.html" class="btn btn-neutral float-left" title="trimesh.viewer.windowed module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

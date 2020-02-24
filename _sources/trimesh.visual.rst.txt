@@ -1,0 +1,21 @@
+trimesh.visual package
+======================
+
+Submodules
+----------
+
+.. toctree::
+
+   trimesh.visual.color
+   trimesh.visual.material
+   trimesh.visual.objects
+   trimesh.visual.resolvers
+   trimesh.visual.texture
+
+Module contents
+---------------
+
+.. automodule:: trimesh.visual
+   :members:
+   :undoc-members:
+   :show-inheritance:

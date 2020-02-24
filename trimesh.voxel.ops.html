@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.voxel.ops module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.voxel.runlength module" href="trimesh.voxel.runlength.html" />
+    <link rel="prev" title="trimesh.voxel.morphology module" href="trimesh.voxel.morphology.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.voxel.html">trimesh.voxel package</a> &raquo;</li>
+        
+      <li>trimesh.voxel.ops module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.voxel.ops.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.voxel.ops">
+<span id="trimesh-voxel-ops-module"></span><h1>trimesh.voxel.ops module<a class="headerlink" href="#module-trimesh.voxel.ops" title="Permalink to this headline">¶</a></h1>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.boolean_sparse" title="trimesh.voxel.ops.boolean_sparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_sparse</span></code></a>(a, b[, operation])</p></td>
+<td><p>Find common rows between two arrays very quickly using 3D boolean sparse matrices.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.fill_base" title="trimesh.voxel.ops.fill_base"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_base</span></code></a>(sparse_indices)</p></td>
+<td><p>Given a sparse surface voxelization, fill in between columns.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.fill_orthographic" title="trimesh.voxel.ops.fill_orthographic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_orthographic</span></code></a>(dense)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.fill_voxelization" title="trimesh.voxel.ops.fill_voxelization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_voxelization</span></code></a>(sparse_indices)</p></td>
+<td><p>Given a sparse surface voxelization, fill in between columns.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.indices_to_points" title="trimesh.voxel.ops.indices_to_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indices_to_points</span></code></a>(indices[, pitch, origin])</p></td>
+<td><p>Convert indices of an (n,m,p) matrix into a set of voxel center points.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.matrix_to_marching_cubes" title="trimesh.voxel.ops.matrix_to_marching_cubes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix_to_marching_cubes</span></code></a>(matrix[, pitch])</p></td>
+<td><p>Convert an (n,m,p) matrix into a mesh, using marching_cubes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.matrix_to_points" title="trimesh.voxel.ops.matrix_to_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix_to_points</span></code></a>(matrix[, pitch, origin])</p></td>
+<td><p>Convert an (n,m,p) matrix into a set of points for each voxel center.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.multibox" title="trimesh.voxel.ops.multibox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multibox</span></code></a>(centers[, pitch, colors])</p></td>
+<td><p>Return a Trimesh object with a box at every center.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.points_to_indices" title="trimesh.voxel.ops.points_to_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_indices</span></code></a>(points[, pitch, origin])</p></td>
+<td><p>Convert center points of an (n,m,p) matrix into its indices.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.points_to_marching_cubes" title="trimesh.voxel.ops.points_to_marching_cubes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_marching_cubes</span></code></a>(points[, pitch])</p></td>
+<td><p>Mesh points by assuming they fill a voxel box, and then</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.voxel.ops.sparse_to_matrix" title="trimesh.voxel.ops.sparse_to_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse_to_matrix</span></code></a>(sparse)</p></td>
+<td><p>Take a sparse (n,3) list of integer indexes of filled cells, turn it into a dense (m,o,p) matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.voxel.ops.strip_array" title="trimesh.voxel.ops.strip_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">strip_array</span></code></a>(data)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.voxel.ops.boolean_sparse">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">boolean_sparse</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">operation=&lt;ufunc 'logical_and'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.boolean_sparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find common rows between two arrays very quickly
+using 3D boolean sparse matrices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>)  </em><em>int</em><em>, </em><em>coordinates in space</em>) – </p></li>
+<li><p><strong>b</strong> (<em>(</em><em>m</em><em>, </em><em>d</em><em>)  </em><em>int</em><em>, </em><em>coordinates in space</em>) – </p></li>
+<li><p><strong>operation</strong> (<em>numpy operation function</em><em>, </em><em>ie:</em>) – np.logical_and
+np.logical_or</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>coords</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(q, d) int, coordinates in space</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.fill_base">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">fill_base</code><span class="sig-paren">(</span><em class="sig-param">sparse_indices</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.fill_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sparse surface voxelization, fill in between columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sparse_indices</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em><em>, </em><em>location of filled cells</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>filled</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(m, 3) int, location of filled cells</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.fill_orthographic">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">fill_orthographic</code><span class="sig-paren">(</span><em class="sig-param">dense</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.fill_orthographic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.fill_voxelization">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">fill_voxelization</code><span class="sig-paren">(</span><em class="sig-param">sparse_indices</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.fill_voxelization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sparse surface voxelization, fill in between columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sparse_indices</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em><em>, </em><em>location of filled cells</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>filled</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(m, 3) int, location of filled cells</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.indices_to_points">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">indices_to_points</code><span class="sig-paren">(</span><em class="sig-param">indices</em>, <em class="sig-param">pitch=None</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.indices_to_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert indices of an (n,m,p) matrix into a set of voxel center points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indices</strong> (<em>(</em><em>q</em><em>, </em><em>3</em><em>) </em><em>int</em><em>, </em><em>index of voxel matrix</em><em> (</em><em>n</em><em>,</em><em>m</em><em>,</em><em>p</em><em>)</em>) – </p></li>
+<li><p><strong>pitch</strong> (<em>float</em><em>, </em><em>what pitch was the voxel matrix computed with</em>) – </p></li>
+<li><p><strong>origin</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em><em>, </em><em>what is the origin of the voxel matrix</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>points</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(q, 3) float, list of points</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.matrix_to_marching_cubes">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">matrix_to_marching_cubes</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">pitch=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.matrix_to_marching_cubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an (n,m,p) matrix into a mesh, using marching_cubes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matrix</strong> (<em>(</em><em>n</em><em>, </em><em>m</em><em>, </em><em>p</em><em>) </em><em>bool</em>) – Occupancy array</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mesh</strong> – Mesh generated by meshing voxels using
+the marching cubes algorithm in skimage</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh">trimesh.Trimesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.matrix_to_points">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">matrix_to_points</code><span class="sig-paren">(</span><em class="sig-param">matrix</em>, <em class="sig-param">pitch=None</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.matrix_to_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an (n,m,p) matrix into a set of points for each voxel center.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>(</em><em>n</em><em>,</em><em>m</em><em>,</em><em>p</em><em>) </em><em>bool</em><em>, </em><em>voxel matrix</em>) – </p></li>
+<li><p><strong>pitch</strong> (<em>float</em><em>, </em><em>what pitch was the voxel matrix computed with</em>) – </p></li>
+<li><p><strong>origin</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em><em>, </em><em>what is the origin of the voxel matrix</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>points</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(q, 3) list of points</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.multibox">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">multibox</code><span class="sig-paren">(</span><em class="sig-param">centers</em>, <em class="sig-param">pitch=1.0</em>, <em class="sig-param">colors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.multibox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a Trimesh object with a box at every center.</p>
+<p>Doesn’t do anything nice or fancy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>centers</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Center of boxes that are occupied</p></li>
+<li><p><strong>pitch</strong> (<em>float</em>) – The edge length of a voxel</p></li>
+<li><p><strong>colors</strong> (<em>(</em><em>3</em><em>,</em><em>) or </em><em>(</em><em>4</em><em>,</em><em>) or </em><em>(</em><em>n</em><em>,</em><em>3</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>float</em>) – Color of boxes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>rough</strong> – Mesh object representing inputs</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh">Trimesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.points_to_indices">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">points_to_indices</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">pitch=None</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.points_to_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert center points of an (n,m,p) matrix into its indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>(</em><em>q</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Center points of voxel matrix (n,m,p)</p></li>
+<li><p><strong>pitch</strong> (<em>float</em>) – What pitch was the voxel matrix computed with</p></li>
+<li><p><strong>origin</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em>) – What is the origin of the voxel matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>indices</strong> – List of indices</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(q, 3) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.points_to_marching_cubes">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">points_to_marching_cubes</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">pitch=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.points_to_marching_cubes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mesh points by assuming they fill a voxel box, and then
+running marching cubes on them</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Points in 3D space</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mesh</strong> – Points meshed using marching cubes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh">trimesh.Trimesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.sparse_to_matrix">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">sparse_to_matrix</code><span class="sig-paren">(</span><em class="sig-param">sparse</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.sparse_to_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a sparse (n,3) list of integer indexes of filled cells,
+turn it into a dense (m,o,p) matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sparse</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em>) – Index of filled cells</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dense</strong> – Matrix of filled cells</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(m, o, p) bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.voxel.ops.strip_array">
+<code class="sig-prename descclassname">trimesh.voxel.ops.</code><code class="sig-name descname">strip_array</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.voxel.ops.strip_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.voxel.runlength.html" class="btn btn-neutral float-right" title="trimesh.voxel.runlength module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.voxel.morphology.html" class="btn btn-neutral float-left" title="trimesh.voxel.morphology module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

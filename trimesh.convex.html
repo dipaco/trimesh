@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.convex module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.creation module" href="trimesh.creation.html" />
+    <link rel="prev" title="trimesh.constants module" href="trimesh.constants.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.boolean.html">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.caching.html">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.constants.html">trimesh.constants module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.geometry.html">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.registration.html">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.convex module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.convex.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.convex">
+<span id="trimesh-convex-module"></span><h1>trimesh.convex module<a class="headerlink" href="#module-trimesh.convex" title="Permalink to this headline">¶</a></h1>
+<p>convex.py</p>
+<p>Deal with creating and checking convex objects in 2, 3 and N dimensions.</p>
+<p>Convex is defined as:
+1) “Convex, meaning “curving out” or “extending outward” (compare to concave)
+2) having an outline or surface curved like the exterior of a circle or sphere.
+3) (of a polygon) having only interior angles measuring less than 180</p>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.convex.adjacency_projections" title="trimesh.convex.adjacency_projections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjacency_projections</span></code></a>(mesh)</p></td>
+<td><p>Test if a mesh is convex by projecting the vertices of a triangle onto the normal of its adjacent face.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.convex.convex_hull" title="trimesh.convex.convex_hull"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convex_hull</span></code></a>(obj[, qhull_options])</p></td>
+<td><p>Get a new Trimesh object representing the convex hull of the current mesh, with proper normals and watertight.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.convex.hull_points" title="trimesh.convex.hull_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hull_points</span></code></a>(obj[, qhull_options])</p></td>
+<td><p>Try to extract a convex set of points from multiple input formats.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.convex.is_convex" title="trimesh.convex.is_convex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_convex</span></code></a>(mesh)</p></td>
+<td><p>Check if a mesh is convex.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.convex.adjacency_projections">
+<code class="sig-prename descclassname">trimesh.convex.</code><code class="sig-name descname">adjacency_projections</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.convex.adjacency_projections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a mesh is convex by projecting the vertices of
+a triangle onto the normal of its adjacent face.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh"><em>Trimesh</em></a>) – Input geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>projection</strong> – Distance of projection of adjacent vertex onto plane</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(len(mesh.face_adjacency),) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.convex.convex_hull">
+<code class="sig-prename descclassname">trimesh.convex.</code><code class="sig-name descname">convex_hull</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">qhull_options='QbB Pp QJ'</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.convex.convex_hull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a new Trimesh object representing the convex hull of the
+current mesh, with proper normals and watertight.
+Requires scipy &gt;.12.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh"><em>Trimesh</em></a><em>, or </em><em>(</em><em>n</em><em>,</em><em>3</em><em>) </em><em>float</em>) – Mesh or cartesian points</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>convex</strong> – Mesh of convex hull</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh">Trimesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.convex.hull_points">
+<code class="sig-prename descclassname">trimesh.convex.</code><code class="sig-name descname">hull_points</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">qhull_options='QbB Pp'</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.convex.hull_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to extract a convex set of points from multiple input formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>Trimesh object</em>) – (n,d) points
+(m,) Trimesh objects</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>points</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(o,d) convex set of points</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.convex.is_convex">
+<code class="sig-prename descclassname">trimesh.convex.</code><code class="sig-name descname">is_convex</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.convex.is_convex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a mesh is convex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh"><em>Trimesh</em></a>) – Input geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>convex</strong> – Was passed mesh convex or not</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.creation.html" class="btn btn-neutral float-right" title="trimesh.creation module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.constants.html" class="btn btn-neutral float-left" title="trimesh.constants module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

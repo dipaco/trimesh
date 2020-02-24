@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.visual.texture module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.voxel package" href="trimesh.voxel.html" />
+    <link rel="prev" title="trimesh.visual.resolvers module" href="trimesh.visual.resolvers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.visual.html">trimesh.visual package</a> &raquo;</li>
+        
+      <li>trimesh.visual.texture module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.visual.texture.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.visual.texture">
+<span id="trimesh-visual-texture-module"></span><h1>trimesh.visual.texture module<a class="headerlink" href="#module-trimesh.visual.texture" title="Permalink to this headline">¶</a></h1>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals" title="trimesh.visual.texture.TextureVisuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextureVisuals</span></code></a>([uv, material, image])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.power_resize" title="trimesh.visual.texture.power_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">power_resize</span></code></a>(image[, resample, square])</p></td>
+<td><p>Resize a PIL image so every dimension is a power of two.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.texture.unmerge_faces" title="trimesh.visual.texture.unmerge_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unmerge_faces</span></code></a>(faces, *args)</p></td>
+<td><p>Textured meshes can come with faces referencing vertex indices (<cite>v</cite>) and an array the same shape which references vertex texture indices (<cite>vt</cite>) and sometimes even normal (<cite>vn</cite>).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.visual.texture.TextureVisuals">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.visual.texture.</code><code class="sig-name descname">TextureVisuals</code><span class="sig-paren">(</span><em class="sig-param">uv=None</em>, <em class="sig-param">material=None</em>, <em class="sig-param">image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.copy" title="trimesh.visual.texture.TextureVisuals.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Return a copy of the current TextureVisuals object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.crc" title="trimesh.visual.texture.TextureVisuals.crc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crc</span></code></a>()</p></td>
+<td><p>Get a CRC of the stored data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.face_subset" title="trimesh.visual.texture.TextureVisuals.face_subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_subset</span></code></a>(face_index)</p></td>
+<td><p>Get a copy of</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.to_color" title="trimesh.visual.texture.TextureVisuals.to_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_color</span></code></a>()</p></td>
+<td><p>Convert textured visuals to a ColorVisuals with vertex color calculated from texture.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.update_faces" title="trimesh.visual.texture.TextureVisuals.update_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_faces</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate face properties</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.update_vertices" title="trimesh.visual.texture.TextureVisuals.update_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_vertices</span></code></a>(mask)</p></td>
+<td><p>Apply a mask to remove or duplicate vertex properties.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.defined" title="trimesh.visual.texture.TextureVisuals.defined"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defined</span></code></a></p></td>
+<td><p>Check if any data is stored</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.kind" title="trimesh.visual.texture.TextureVisuals.kind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kind</span></code></a></p></td>
+<td><p>Return the type of visual data stored</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.visual.texture.TextureVisuals.uv" title="trimesh.visual.texture.TextureVisuals.uv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv</span></code></a></p></td>
+<td><p>Get the stored UV coordinates.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current TextureVisuals object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>copied</strong> – Contains the same information in a new object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="trimesh.visual.html#trimesh.visual.TextureVisuals" title="trimesh.visual.TextureVisuals">TextureVisuals</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.crc">
+<code class="sig-name descname">crc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.crc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a CRC of the stored data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>crc</strong> – Hash of items in self._data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.defined">
+<em class="property">property </em><code class="sig-name descname">defined</code><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.defined" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if any data is stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>defined</strong> – Are UV coordinates and images set?</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.face_subset">
+<code class="sig-name descname">face_subset</code><span class="sig-paren">(</span><em class="sig-param">face_index</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.face_subset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.kind">
+<em class="property">property </em><code class="sig-name descname">kind</code><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of visual data stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>kind</strong> – What type of visuals are defined</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.to_color">
+<code class="sig-name descname">to_color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.to_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert textured visuals to a ColorVisuals with vertex
+color calculated from texture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>vis</strong> – Contains vertex color from texture</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>trimesh.visuals.ColorVisuals</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.update_faces">
+<code class="sig-name descname">update_faces</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.update_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate face properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.update_vertices">
+<code class="sig-name descname">update_vertices</code><span class="sig-paren">(</span><em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.update_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a mask to remove or duplicate vertex properties.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.visual.texture.TextureVisuals.uv">
+<em class="property">property </em><code class="sig-name descname">uv</code><a class="headerlink" href="#trimesh.visual.texture.TextureVisuals.uv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stored UV coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>uv</strong> – Pixel position per- vertex</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(n, 2) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.texture.power_resize">
+<code class="sig-prename descclassname">trimesh.visual.texture.</code><code class="sig-name descname">power_resize</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">resample=1</em>, <em class="sig-param">square=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.power_resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resize a PIL image so every dimension is a power of two.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>PIL.Image</em>) – Input image</p></li>
+<li><p><strong>resample</strong> (<em>int</em>) – Passed to Image.resize</p></li>
+<li><p><strong>square</strong> (<em>bool</em>) – If True, upsize to a square image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>resized</strong> – Input image resized</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PIL.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.visual.texture.unmerge_faces">
+<code class="sig-prename descclassname">trimesh.visual.texture.</code><code class="sig-name descname">unmerge_faces</code><span class="sig-paren">(</span><em class="sig-param">faces</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.visual.texture.unmerge_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Textured meshes can come with faces referencing vertex
+indices (<cite>v</cite>) and an array the same shape which references
+vertex texture indices (<cite>vt</cite>) and sometimes even normal (<cite>vn</cite>).</p>
+<p>Vertex locations with different values of any of these can’t
+be considered the “same” vertex, and for our simple data
+model we need to not combine these vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>int</em>) – References vertex indices</p></li>
+<li><p><strong>*args</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>int</em>) – Various references of corresponding values
+This is usually UV coordinates or normal indexes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_faces</strong> (<em>(m, d) int</em>) – New faces for masked vertices</p></li>
+<li><p><strong>mask_v</strong> (<em>(p,) int</em>) – A mask to apply to vertices</p></li>
+<li><p><strong>mask_*</strong> (<em>(p,) int</em>) – A mask to apply to vt array to get matching UV coordinates
+Returns as many of these as args were passed</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.voxel.html" class="btn btn-neutral float-right" title="trimesh.voxel package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.visual.resolvers.html" class="btn btn-neutral float-left" title="trimesh.visual.resolvers module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

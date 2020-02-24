@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.caching module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.collision module" href="trimesh.collision.html" />
+    <link rel="prev" title="trimesh.bounds module" href="trimesh.bounds.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.boolean.html">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.constants.html">trimesh.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.convex.html">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.geometry.html">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.registration.html">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.caching module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.caching.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.caching">
+<span id="trimesh-caching-module"></span><h1>trimesh.caching module<a class="headerlink" href="#module-trimesh.caching" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="caching-py">
+<h2>caching.py<a class="headerlink" href="#caching-py" title="Permalink to this headline">¶</a></h2>
+<p>Functions and classes that help with tracking changes in ndarrays
+and clearing cached values based on those changes.</p>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.Cache" title="trimesh.caching.Cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cache</span></code></a>(id_function[, force_immutable])</p></td>
+<td><p>Class to cache values which will be stored until the result of an ID function changes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.DataStore" title="trimesh.caching.DataStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataStore</span></code></a>()</p></td>
+<td><p>A class to store multiple numpy arrays and track them all for changes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.TrackedArray" title="trimesh.caching.TrackedArray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrackedArray</span></code></a></p></td>
+<td><p>Subclass of numpy.ndarray that provides hash methods to track changes.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.cache_decorator" title="trimesh.caching.cache_decorator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cache_decorator</span></code></a>(function)</p></td>
+<td><p>A decorator for class methods, replaces &#64;property but will store and retrieve function return values in object cache.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.tracked_array" title="trimesh.caching.tracked_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tracked_array</span></code></a>(array[, dtype])</p></td>
+<td><p>Properly subclass a numpy ndarray to track changes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.caching.Cache">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.caching.</code><code class="sig-name descname">Cache</code><span class="sig-paren">(</span><em class="sig-param">id_function</em>, <em class="sig-param">force_immutable=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to cache values which will be stored until the
+result of an ID function changes.</p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.Cache.clear" title="trimesh.caching.Cache.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>([exclude])</p></td>
+<td><p>Remove all elements in the cache.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.Cache.delete" title="trimesh.caching.Cache.delete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete</span></code></a>(key)</p></td>
+<td><p>Remove a key from the cache.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.Cache.id_set" title="trimesh.caching.Cache.id_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_set</span></code></a>()</p></td>
+<td><p>Set the current ID to the value of the ID function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.Cache.update" title="trimesh.caching.Cache.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(items)</p></td>
+<td><p>Update the cache with a set of key, value pairs without checking id_function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.Cache.verify" title="trimesh.caching.Cache.verify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify</span></code></a>()</p></td>
+<td><p>Verify that the cached values are still for the same value of id_function and delete all stored items if the value of id_function has changed.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.caching.Cache.clear">
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param">exclude=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all elements in the cache.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.Cache.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a key from the cache.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.Cache.id_set">
+<code class="sig-name descname">id_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache.id_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the current ID to the value of the ID function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.Cache.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">items</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the cache with a set of key, value pairs without
+checking id_function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.Cache.verify">
+<code class="sig-name descname">verify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.Cache.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify that the cached values are still for the same
+value of id_function and delete all stored items if
+the value of id_function has changed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.caching.DataStore">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.caching.</code><code class="sig-name descname">DataStore</code><a class="headerlink" href="#trimesh.caching.DataStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Mapping</span></code></p>
+<p>A class to store multiple numpy arrays and track them all
+for changes.</p>
+<p>Operates like a dict that only stores numpy.ndarray</p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.clear" title="trimesh.caching.DataStore.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p>Remove all data from the DataStore.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.crc" title="trimesh.caching.DataStore.crc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crc</span></code></a>()</p></td>
+<td><p>Get a CRC reflecting everything in the DataStore.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.fast_hash" title="trimesh.caching.DataStore.fast_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fast_hash</span></code></a>()</p></td>
+<td><p>Get a CRC32 or xxhash.xxh64 reflecting the DataStore.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.is_empty" title="trimesh.caching.DataStore.is_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_empty</span></code></a>()</p></td>
+<td><p>Is the current DataStore empty or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.md5" title="trimesh.caching.DataStore.md5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">md5</span></code></a>()</p></td>
+<td><p>Get an MD5 reflecting everything in the DataStore.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.update" title="trimesh.caching.DataStore.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(values)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.DataStore.mutable" title="trimesh.caching.DataStore.mutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutable</span></code></a></p></td>
+<td><p>Is data allowed to be altered or not.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.caching.DataStore.clear">
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all data from the DataStore.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.crc">
+<code class="sig-name descname">crc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.crc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a CRC reflecting everything in the DataStore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>crc</strong> – CRC of data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.fast_hash">
+<code class="sig-name descname">fast_hash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.fast_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a CRC32 or xxhash.xxh64 reflecting the DataStore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>hashed</strong> – Checksum of data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the current DataStore empty or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>empty</strong> – False if there are items in the DataStore</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.md5">
+<code class="sig-name descname">md5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.md5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an MD5 reflecting everything in the DataStore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>md5</strong> – MD5 of data in hexadecimal</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.mutable">
+<em class="property">property </em><code class="sig-name descname">mutable</code><a class="headerlink" href="#trimesh.caching.DataStore.mutable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is data allowed to be altered or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_mutable</strong> – Can data be altered in the DataStore</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.DataStore.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">values</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.DataStore.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.caching.TrackedArray">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.caching.</code><code class="sig-name descname">TrackedArray</code><a class="headerlink" href="#trimesh.caching.TrackedArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+<p>Subclass of numpy.ndarray that provides hash methods
+to track changes.</p>
+<p>General method is to aggressively set ‘modified’ flags
+on operations which might (but don’t necessarily) alter
+the array, ideally we sometimes compute hashes when we
+don’t need to, but we don’t return wrong hashes ever.</p>
+<p>We store boolean modified flag for each hash type to
+make checks fast even for queries of different hashes.</p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.TrackedArray.crc" title="trimesh.caching.TrackedArray.crc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crc</span></code></a>()</p></td>
+<td><p>A zlib.crc32 or zlib.adler32 checksum of the current data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.caching.TrackedArray.fast_hash" title="trimesh.caching.TrackedArray.fast_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fast_hash</span></code></a>()</p></td>
+<td><p>An xxhash.b64 hash of the array.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.TrackedArray.md5" title="trimesh.caching.TrackedArray.md5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">md5</span></code></a>()</p></td>
+<td><p>Return an MD5 hash of the current array.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.caching.TrackedArray.mutable" title="trimesh.caching.TrackedArray.mutable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutable</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt>
+<code class="sig-name descname">md5 :       str, hexadecimal MD5 of array</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">crc :       int, zlib crc32/adler32 checksum</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="sig-name descname">fast_hash : int, CRC or xxhash.xx64</code></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.TrackedArray.crc">
+<code class="sig-name descname">crc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.TrackedArray.crc" title="Permalink to this definition">¶</a></dt>
+<dd><p>A zlib.crc32 or zlib.adler32 checksum
+of the current data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>crc</strong> – Checksum from zlib.crc32 or zlib.adler32</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.TrackedArray.fast_hash">
+<code class="sig-name descname">fast_hash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.TrackedArray.fast_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>An xxhash.b64 hash of the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>xx</strong> – xxhash.xxh64 hash of array.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.TrackedArray.md5">
+<code class="sig-name descname">md5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.TrackedArray.md5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an MD5 hash of the current array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>md5</strong> – Hexadecimal MD5 of the array</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.caching.TrackedArray.mutable">
+<em class="property">property </em><code class="sig-name descname">mutable</code><a class="headerlink" href="#trimesh.caching.TrackedArray.mutable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.caching.cache_decorator">
+<code class="sig-prename descclassname">trimesh.caching.</code><code class="sig-name descname">cache_decorator</code><span class="sig-paren">(</span><em class="sig-param">function</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.cache_decorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A decorator for class methods, replaces &#64;property
+but will store and retrieve function return values
+in object cache.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>function</strong> (<em>method</em>) – <p>This is used as a decorator:
+<a href="#id1"><span class="problematic" id="id2">``</span></a>`
+&#64;cache_decorator
+def foo(self, things):</p>
+<blockquote>
+<div><p>return ‘happy days’</p>
+</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.caching.tracked_array">
+<code class="sig-prename descclassname">trimesh.caching.</code><code class="sig-name descname">tracked_array</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.caching.tracked_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properly subclass a numpy ndarray to track changes.</p>
+<p>Avoids some pitfalls of subclassing by forcing contiguous
+arrays and does a view into a TrackedArray.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>array- like object</em>) – To be turned into a TrackedArray</p></li>
+<li><p><strong>dtype</strong> (<em>np.dtype</em>) – Which dtype to use for the array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tracked</strong> – Contains input array data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#trimesh.caching.TrackedArray" title="trimesh.caching.TrackedArray">TrackedArray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.collision.html" class="btn btn-neutral float-right" title="trimesh.collision module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.bounds.html" class="btn btn-neutral float-left" title="trimesh.bounds module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

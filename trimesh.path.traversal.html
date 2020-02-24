@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.path.traversal module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.path.util module" href="trimesh.path.util.html" />
+    <link rel="prev" title="trimesh.path.simplify module" href="trimesh.path.simplify.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.path.html">trimesh.path package</a> &raquo;</li>
+        
+      <li>trimesh.path.traversal module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.path.traversal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.path.traversal">
+<span id="trimesh-path-traversal-module"></span><h1>trimesh.path.traversal module<a class="headerlink" href="#module-trimesh.path.traversal" title="Permalink to this headline">¶</a></h1>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.traversal.PathSample" title="trimesh.path.traversal.PathSample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PathSample</span></code></a>(points)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.traversal.closed_paths" title="trimesh.path.traversal.closed_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closed_paths</span></code></a>(entities, vertices)</p></td>
+<td><p>Paths are lists of entity indices.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.traversal.discretize_path" title="trimesh.path.traversal.discretize_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">discretize_path</span></code></a>(entities, vertices, path[, …])</p></td>
+<td><p>Turn a list of entity indices into a path of connected points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.traversal.resample_path" title="trimesh.path.traversal.resample_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resample_path</span></code></a>(points[, count, step, step_round])</p></td>
+<td><p>Given a path along (n,d) points, resample them such that the distance traversed along the path is constant in between each of the resampled points.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.traversal.split" title="trimesh.path.traversal.split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></a>(self)</p></td>
+<td><p>Split a Path2D into multiple Path2D objects where each one has exactly one root curve.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.traversal.vertex_graph" title="trimesh.path.traversal.vertex_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_graph</span></code></a>(entities)</p></td>
+<td><p>Given a set of entity objects generate a networkx.Graph that represents their vertex nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.traversal.vertex_to_entity_path" title="trimesh.path.traversal.vertex_to_entity_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_to_entity_path</span></code></a>(vertex_path, graph, …)</p></td>
+<td><p>Convert a path of vertex indices to a path of entity indices.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.path.traversal.PathSample">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">PathSample</code><span class="sig-paren">(</span><em class="sig-param">points</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.PathSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.traversal.PathSample.sample" title="trimesh.path.traversal.PathSample.sample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code></a>(distances)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.traversal.PathSample.truncate" title="trimesh.path.traversal.PathSample.truncate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">truncate</span></code></a>(distance)</p></td>
+<td><p>Return a truncated version of the path.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.path.traversal.PathSample.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">distances</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.PathSample.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.path.traversal.PathSample.truncate">
+<code class="sig-name descname">truncate</code><span class="sig-paren">(</span><em class="sig-param">distance</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.PathSample.truncate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a truncated version of the path.
+Only one vertex (at the endpoint) will be added.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.closed_paths">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">closed_paths</code><span class="sig-paren">(</span><em class="sig-param">entities</em>, <em class="sig-param">vertices</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.closed_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paths are lists of entity indices.
+We first generate vertex paths using graph cycle algorithms,
+and then convert them to entity paths.</p>
+<p>This will also change the ordering of entity.points in place
+so a path may be traversed without having to reverse the entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entities</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>entity objects</em>) – Entity objects</p></li>
+<li><p><strong>vertices</strong> (<em>(</em><em>m</em><em>, </em><em>dimension</em><em>) </em><em>float</em>) – Vertex points in space</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>entity_paths</strong> – Ordered traversals of entities</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>sequence of (n,) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.discretize_path">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">discretize_path</code><span class="sig-paren">(</span><em class="sig-param">entities</em>, <em class="sig-param">vertices</em>, <em class="sig-param">path</em>, <em class="sig-param">scale=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.discretize_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn a list of entity indices into a path of connected points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entities</strong> (<em>(</em><em>j</em><em>,</em><em>) </em><em>entity objects</em>) – Objects like ‘Line’, ‘Arc’, etc.</p></li>
+<li><p><strong>vertices</strong> (<em>(</em><em>n</em><em>, </em><em>dimension</em><em>) </em><em>float</em>) – Vertex points in space.</p></li>
+<li><p><strong>path</strong> (<em>(</em><em>m</em><em>,</em><em>) </em><em>int</em>) – Indexes of entities</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Overall scale of drawing used for
+numeric tolerances in certain cases</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>discrete</strong> – Connected points in space that lie on the
+path and can be connected with line segments.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(p, dimension) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.resample_path">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">resample_path</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">count=None</em>, <em class="sig-param">step=None</em>, <em class="sig-param">step_round=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.resample_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a path along (n,d) points, resample them such that the
+distance traversed along the path is constant in between each
+of the resampled points. Note that this can produce clipping at
+corners, as the original vertices are NOT guaranteed to be in the
+new, resampled path.</p>
+<p>ONLY ONE of count or step can be specified
+Result can be uniformly distributed (np.linspace) by specifying count
+Result can have a specific distance (np.arange) by specifying step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>float</em>) – Points in space</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>,</em>) – Number of points to sample evenly (aka np.linspace)</p></li>
+<li><p><strong>step</strong> (<em>float</em>) – Distance each step should take along the path (aka np.arange)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>resampled</strong> – Points on the path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(j,d) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.split">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a Path2D into multiple Path2D objects where each
+one has exactly one root curve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>self</strong> (<a class="reference internal" href="trimesh.path.html#trimesh.path.Path2D" title="trimesh.path.Path2D"><em>trimesh.path.Path2D</em></a>) – Input geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>split</strong> – Original geometry as separate paths</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of trimesh.path.Path2D</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.vertex_graph">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">vertex_graph</code><span class="sig-paren">(</span><em class="sig-param">entities</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.vertex_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a set of entity objects generate a networkx.Graph
+that represents their vertex nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entities</strong> (<em>list</em>) – Objects with ‘closed’ and ‘nodes’ attributes</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>graph</strong> (<em>networkx.Graph</em>) – Graph where node indexes represent vertices</p></li>
+<li><p><strong>closed</strong> (<em>(n,) int</em>) – Indexes of entities which are ‘closed’</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.traversal.vertex_to_entity_path">
+<code class="sig-prename descclassname">trimesh.path.traversal.</code><code class="sig-name descname">vertex_to_entity_path</code><span class="sig-paren">(</span><em class="sig-param">vertex_path</em>, <em class="sig-param">graph</em>, <em class="sig-param">entities</em>, <em class="sig-param">vertices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.traversal.vertex_to_entity_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a path of vertex indices to a path of entity indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertex_path</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>int</em>) – Ordered list of vertex indices representing a path</p></li>
+<li><p><strong>graph</strong> (<em>nx.Graph</em>) – Vertex connectivity</p></li>
+<li><p><strong>entities</strong> (<em>(</em><em>m</em><em>,</em><em>) </em><em>list</em>) – Entity objects</p></li>
+<li><p><strong>vertices</strong> (<em>(</em><em>p</em><em>, </em><em>dimension</em><em>) </em><em>float</em>) – Vertex points in space</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>entity_path</strong> – Entity indices which make up vertex_path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(q,) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.path.util.html" class="btn btn-neutral float-right" title="trimesh.path.util module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.path.simplify.html" class="btn btn-neutral float-left" title="trimesh.path.simplify module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

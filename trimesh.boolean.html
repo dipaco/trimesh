@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.boolean module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.bounds module" href="trimesh.bounds.html" />
+    <link rel="prev" title="trimesh.base module" href="trimesh.base.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.caching.html">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.constants.html">trimesh.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.convex.html">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.geometry.html">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.registration.html">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.boolean module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.boolean.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.boolean">
+<span id="trimesh-boolean-module"></span><h1>trimesh.boolean module<a class="headerlink" href="#module-trimesh.boolean" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="boolean-py">
+<h2>boolean.py<a class="headerlink" href="#boolean-py" title="Permalink to this headline">¶</a></h2>
+<p>Do boolean operations on meshes using either Blender or OpenSCAD.</p>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.boolean.boolean_automatic" title="trimesh.boolean.boolean_automatic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_automatic</span></code></a>(meshes, operation, **kwargs)</p></td>
+<td><p>Automatically pick an engine for booleans based on availability.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.boolean.difference" title="trimesh.boolean.difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">difference</span></code></a>(meshes[, engine])</p></td>
+<td><p>Compute the boolean difference between a mesh an n other meshes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.boolean.intersection" title="trimesh.boolean.intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersection</span></code></a>(meshes[, engine])</p></td>
+<td><p>Compute the boolean intersection between a mesh an n other meshes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.boolean.union" title="trimesh.boolean.union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">union</span></code></a>(meshes[, engine])</p></td>
+<td><p>Compute the boolean union between a mesh an n other meshes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.boolean.boolean_automatic">
+<code class="sig-prename descclassname">trimesh.boolean.</code><code class="sig-name descname">boolean_automatic</code><span class="sig-paren">(</span><em class="sig-param">meshes</em>, <em class="sig-param">operation</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.boolean.boolean_automatic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically pick an engine for booleans based on availability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>list of Trimesh</em>) – Meshes to be booleaned</p></li>
+<li><p><strong>operation</strong> (<em>str</em>) – Type of boolean, i.e. ‘union’, ‘intersection’, ‘difference’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> – Result of boolean operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh">trimesh.Trimesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.boolean.difference">
+<code class="sig-prename descclassname">trimesh.boolean.</code><code class="sig-name descname">difference</code><span class="sig-paren">(</span><em class="sig-param">meshes</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.boolean.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the boolean difference between a mesh an n other meshes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>list of trimesh.Trimesh</em>) – Meshes to be processed</p></li>
+<li><p><strong>engine</strong> (<em>str</em>) – Which backend to use, i.e. ‘blender’ or ‘scad’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>difference</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>a - (other meshes), <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs for a Trimesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.boolean.intersection">
+<code class="sig-prename descclassname">trimesh.boolean.</code><code class="sig-name descname">intersection</code><span class="sig-paren">(</span><em class="sig-param">meshes</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.boolean.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the boolean intersection between a mesh an n other meshes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>list of trimesh.Trimesh</em>) – Meshes to be processed</p></li>
+<li><p><strong>engine</strong> (<em>str</em>) – Which backend to use, i.e. ‘blender’ or ‘scad’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>intersection</strong> – volume that is contained by all meshes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs for a Trimesh object of the</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.boolean.union">
+<code class="sig-prename descclassname">trimesh.boolean.</code><code class="sig-name descname">union</code><span class="sig-paren">(</span><em class="sig-param">meshes</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.boolean.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the boolean union between a mesh an n other meshes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>list of trimesh.Trimesh</em>) – Meshes to be processed</p></li>
+<li><p><strong>engine</strong> (<em>str</em>) – Which backend to use, i.e. ‘blender’ or ‘scad’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>union</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>a + (other meshes), <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs for a Trimesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.bounds.html" class="btn btn-neutral float-right" title="trimesh.bounds module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.base.html" class="btn btn-neutral float-left" title="trimesh.base module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

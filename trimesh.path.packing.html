@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.path.packing module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.path.path module" href="trimesh.path.path.html" />
+    <link rel="prev" title="trimesh.path.intersections module" href="trimesh.path.intersections.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.path.html">trimesh.path package</a> &raquo;</li>
+        
+      <li>trimesh.path.packing module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.path.packing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.path.packing">
+<span id="trimesh-path-packing-module"></span><h1>trimesh.path.packing module<a class="headerlink" href="#module-trimesh.path.packing" title="Permalink to this headline">¶</a></h1>
+<p><strong>Classes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.packing.RectangleBin" title="trimesh.path.packing.RectangleBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectangleBin</span></code></a>([bounds, size])</p></td>
+<td><p>2D BSP tree node.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.packing.multipack" title="trimesh.path.packing.multipack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multipack</span></code></a>(polygons[, sheet_size, …])</p></td>
+<td><p>Pack polygons into a rectangle by taking each Polygon’s OBB and then packing that as a rectangle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.packing.pack_paths" title="trimesh.path.packing.pack_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pack_paths</span></code></a>(paths[, sheet_size])</p></td>
+<td><p>Pack a list of Path2D objects into a rectangle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.packing.pack_rectangles" title="trimesh.path.packing.pack_rectangles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pack_rectangles</span></code></a>(rectangles, sheet_size[, …])</p></td>
+<td><p>Pack smaller rectangles onto a larger rectangle, using a binary space partition tree.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="trimesh.path.packing.RectangleBin">
+<em class="property">class </em><code class="sig-prename descclassname">trimesh.path.packing.</code><code class="sig-name descname">RectangleBin</code><span class="sig-paren">(</span><em class="sig-param">bounds=None</em>, <em class="sig-param">size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.RectangleBin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>2D BSP tree node.
+<a class="reference external" href="http://www.blackpawn.com/texts/lightmaps/">http://www.blackpawn.com/texts/lightmaps/</a></p>
+<p><strong>Attributes</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.packing.RectangleBin.extents" title="trimesh.path.packing.RectangleBin.extents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extents</span></code></a></p></td>
+<td><p>Bounding box size.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.packing.RectangleBin.insert" title="trimesh.path.packing.RectangleBin.insert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert</span></code></a>(rectangle)</p></td>
+<td><p>Insert a rectangle into the bin.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.packing.RectangleBin.split" title="trimesh.path.packing.RectangleBin.split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></a>(length[, vertical])</p></td>
+<td><p>Returns two bounding boxes representing the current bounds split into two smaller boxes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.path.packing.RectangleBin.extents">
+<em class="property">property </em><code class="sig-name descname">extents</code><a class="headerlink" href="#trimesh.path.packing.RectangleBin.extents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bounding box size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>extents</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(2,) float, edge lengths of bounding box</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.path.packing.RectangleBin.insert">
+<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param">rectangle</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.RectangleBin.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a rectangle into the bin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rectangle</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>float</em><em>, </em><em>size of rectangle to insert</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.path.packing.RectangleBin.split">
+<code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param">length</em>, <em class="sig-param">vertical=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.RectangleBin.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns two bounding boxes representing the current
+bounds split into two smaller boxes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>float</em><em>, </em><em>length to split</em>) – </p></li>
+<li><p><strong>vertical</strong> (<em>bool</em><em>, </em><em>if True will split box vertically</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>box</strong> – [minx, miny, maxx, maxy]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(2,4) float, two bounding boxes consisting of:</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.packing.multipack">
+<code class="sig-prename descclassname">trimesh.path.packing.</code><code class="sig-name descname">multipack</code><span class="sig-paren">(</span><em class="sig-param">polygons</em>, <em class="sig-param">sheet_size=None</em>, <em class="sig-param">iterations=50</em>, <em class="sig-param">density_escape=0.95</em>, <em class="sig-param">spacing=0.094</em>, <em class="sig-param">quantity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.multipack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pack polygons into a rectangle by taking each Polygon’s OBB
+and then packing that as a rectangle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygons</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>shapely.geometry.Polygon</em>) – Source geometry</p></li>
+<li><p><strong>sheet_size</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>float</em>) – Size of rectangular sheet</p></li>
+<li><p><strong>iterations</strong> (<em>int</em>) – Number of times to run the loop</p></li>
+<li><p><strong>density_escape</strong> (<em>float</em>) – When to exit early (0.0 - 1.0)</p></li>
+<li><p><strong>spacing</strong> (<em>float</em>) – How big a gap to leave between polygons</p></li>
+<li><p><strong>quantity</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>int</em><em>, or </em><em>None</em>) – Quantity of each Polygon</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>overall_inserted</strong> (<em>(m,) int</em>) – Indexes of inserted polygons</p></li>
+<li><p><strong>packed</strong> (<em>(m, 3, 3) float</em>) – Homogeonous transforms from original frame to packed frame</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.packing.pack_paths">
+<code class="sig-prename descclassname">trimesh.path.packing.</code><code class="sig-name descname">pack_paths</code><span class="sig-paren">(</span><em class="sig-param">paths</em>, <em class="sig-param">sheet_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.pack_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pack a list of Path2D objects into a rectangle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>paths</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><a class="reference internal" href="trimesh.path.html#trimesh.path.Path2D" title="trimesh.path.Path2D"><em>Path2D</em></a>) – Geometry to be packed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>packed</strong> (<em>trimesh.path.Path2D</em>) – Object containing input geometry</p></li>
+<li><p><strong>inserted</strong> (<em>(m,) int</em>) – Indexes of paths inserted into result</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.packing.pack_rectangles">
+<code class="sig-prename descclassname">trimesh.path.packing.</code><code class="sig-name descname">pack_rectangles</code><span class="sig-paren">(</span><em class="sig-param">rectangles</em>, <em class="sig-param">sheet_size</em>, <em class="sig-param">shuffle=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.packing.pack_rectangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pack smaller rectangles onto a larger rectangle, using a binary
+space partition tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rectangles</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>float</em>) – An array of (width, height) pairs
+representing the rectangles to be packed.</p></li>
+<li><p><strong>sheet_size</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>float</em>) – Width, height of rectangular sheet</p></li>
+<li><p><strong>shuffle</strong> (<em>bool</em>) – Whether or not to shuffle the insert order of the
+smaller rectangles, as the final packing density depends
+on insertion order.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>density</strong> (<em>float</em>) – Area filled over total sheet area</p></li>
+<li><p><strong>offset</strong> (<em>(m,2) float</em>) – Offsets to move rectangles to their packed location</p></li>
+<li><p><strong>inserted</strong> (<em>(n,) bool</em>) – Which of the original rectangles were packed</p></li>
+<li><p><strong>consumed_box</strong> (<em>(2,) float</em>) – Bounding box size of packed result</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.path.path.html" class="btn btn-neutral float-right" title="trimesh.path.path module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.path.intersections.html" class="btn btn-neutral float-left" title="trimesh.path.intersections module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.registration module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.remesh module" href="trimesh.remesh.html" />
+    <link rel="prev" title="trimesh.proximity module" href="trimesh.proximity.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.boolean.html">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.caching.html">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.constants.html">trimesh.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.convex.html">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.geometry.html">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.registration module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.registration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.registration">
+<span id="trimesh-registration-module"></span><h1>trimesh.registration module<a class="headerlink" href="#module-trimesh.registration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="registration-py">
+<h2>registration.py<a class="headerlink" href="#registration-py" title="Permalink to this headline">¶</a></h2>
+<p>Functions for registering (aligning) point clouds with meshes.</p>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.registration.icp" title="trimesh.registration.icp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">icp</span></code></a>(a, b[, initial, threshold, max_iterations])</p></td>
+<td><p>Apply the iterative closest point algorithm to align a point cloud with another point cloud or mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.registration.mesh_other" title="trimesh.registration.mesh_other"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_other</span></code></a>(mesh, other[, samples, scale, …])</p></td>
+<td><p>Align a mesh with another mesh or a PointCloud using the principal axes of inertia as a starting point which is refined by iterative closest point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.registration.procrustes" title="trimesh.registration.procrustes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">procrustes</span></code></a>(a, b[, reflection, translation, …])</p></td>
+<td><p>Perform Procrustes’ analysis subject to constraints.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.registration.icp">
+<code class="sig-prename descclassname">trimesh.registration.</code><code class="sig-name descname">icp</code><span class="sig-paren">(</span><em class="sig-param">a, b, initial=array([[1., 0., 0., 0.],        [0., 1., 0., 0.],        [0., 0., 1., 0.],        [0., 0., 0., 1.]]), threshold=1e-05, max_iterations=20, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.registration.icp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the iterative closest point algorithm to align a point cloud with
+another point cloud or mesh. Will only produce reasonable results if the
+initial transformation is roughly correct. Initial transformation can be
+found by applying Procrustes’ analysis to a suitable set of landmark
+points (often picked manually).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>(</em><em>n</em><em>,</em><em>3</em><em>) </em><em>float</em>) – List of points in space.</p></li>
+<li><p><strong>b</strong> (<em>(</em><em>m</em><em>,</em><em>3</em><em>) </em><em>float</em><em> or </em><a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh"><em>Trimesh</em></a>) – List of points in space or mesh.</p></li>
+<li><p><strong>initial</strong> (<em>(</em><em>4</em><em>,</em><em>4</em><em>) </em><em>float</em>) – Initial transformation.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Stop when change in cost is less than threshold</p></li>
+<li><p><strong>max_iterations</strong> (<em>int</em>) – Maximum number of iterations</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Args to pass to procrustes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>matrix</strong> (<em>(4,4) float</em>) – The transformation matrix sending a to b</p></li>
+<li><p><strong>transformed</strong> (<em>(n,3) float</em>) – The image of a under the transformation</p></li>
+<li><p><strong>cost</strong> (<em>float</em>) – The cost of the transformation</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.registration.mesh_other">
+<code class="sig-prename descclassname">trimesh.registration.</code><code class="sig-name descname">mesh_other</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">other</em>, <em class="sig-param">samples=500</em>, <em class="sig-param">scale=False</em>, <em class="sig-param">icp_first=10</em>, <em class="sig-param">icp_final=50</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.registration.mesh_other" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align a mesh with another mesh or a PointCloud using
+the principal axes of inertia as a starting point which
+is refined by iterative closest point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<em>trimesh.Trimesh object</em>) – Mesh to align with other</p></li>
+<li><p><strong>other</strong> (<a class="reference internal" href="trimesh.html#trimesh.Trimesh" title="trimesh.Trimesh"><em>trimesh.Trimesh</em></a><em> or </em><em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Mesh or points in space</p></li>
+<li><p><strong>samples</strong> (<em>int</em>) – Number of samples from mesh surface to align</p></li>
+<li><p><strong>scale</strong> (<em>bool</em>) – Allow scaling in transform</p></li>
+<li><p><strong>icp_first</strong> (<em>int</em>) – How many ICP iterations for the 9 possible
+combinations of sign flippage</p></li>
+<li><p><strong>icp_final</strong> (<em>int</em>) – How many ICP iterations for the closest
+candidate from the wider search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>mesh_to_other</strong> (<em>(4, 4) float</em>) – Transform to align mesh to the other object</p></li>
+<li><p><strong>cost</strong> (<em>float</em>) – Average squared distance per point</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.registration.procrustes">
+<code class="sig-prename descclassname">trimesh.registration.</code><code class="sig-name descname">procrustes</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">reflection=True</em>, <em class="sig-param">translation=True</em>, <em class="sig-param">scale=True</em>, <em class="sig-param">return_cost=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.registration.procrustes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform Procrustes’ analysis subject to constraints. Finds the
+transformation T mapping a to b which minimizes the square sum
+distances between Ta and b, also called the cost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>(</em><em>n</em><em>,</em><em>3</em><em>) </em><em>float</em>) – List of points in space</p></li>
+<li><p><strong>b</strong> (<em>(</em><em>n</em><em>,</em><em>3</em><em>) </em><em>float</em>) – List of points in space</p></li>
+<li><p><strong>reflection</strong> (<em>bool</em>) – If the transformation is allowed reflections</p></li>
+<li><p><strong>translation</strong> (<em>bool</em>) – If the transformation is allowed translations</p></li>
+<li><p><strong>scale</strong> (<em>bool</em>) – If the transformation is allowed scaling</p></li>
+<li><p><strong>return_cost</strong> (<em>bool</em>) – Whether to return the cost and transformed a as well</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>matrix</strong> (<em>(4,4) float</em>) – The transformation matrix sending a to b</p></li>
+<li><p><strong>transformed</strong> (<em>(n,3) float</em>) – The image of a under the transformation</p></li>
+<li><p><strong>cost</strong> (<em>float</em>) – The cost of the transformation</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.remesh.html" class="btn btn-neutral float-right" title="trimesh.remesh module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.proximity.html" class="btn btn-neutral float-left" title="trimesh.proximity module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

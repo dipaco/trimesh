@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.geometry module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.graph module" href="trimesh.graph.html" />
+    <link rel="prev" title="trimesh.exceptions module" href="trimesh.exceptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.base.html">trimesh.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.boolean.html">trimesh.boolean module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.bounds.html">trimesh.bounds module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.caching.html">trimesh.caching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.collision.html">trimesh.collision module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.comparison.html">trimesh.comparison module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.constants.html">trimesh.constants module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.convex.html">trimesh.convex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.creation.html">trimesh.creation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.curvature.html">trimesh.curvature module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.decomposition.html">trimesh.decomposition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exceptions.html">trimesh.exceptions module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.graph.html">trimesh.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.grouping.html">trimesh.grouping module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.inertia.html">trimesh.inertia module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.integrate.html">trimesh.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.intersections.html">trimesh.intersections module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interval.html">trimesh.interval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.nsphere.html">trimesh.nsphere module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.parent.html">trimesh.parent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.permutate.html">trimesh.permutate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.points.html">trimesh.points module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.poses.html">trimesh.poses module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.primitives.html">trimesh.primitives module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.proximity.html">trimesh.proximity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.registration.html">trimesh.registration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.remesh.html">trimesh.remesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.rendering.html">trimesh.rendering module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.repair.html">trimesh.repair module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.sample.html">trimesh.sample module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.schemas.html">trimesh.schemas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.smoothing.html">trimesh.smoothing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.transformations.html">trimesh.transformations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.triangles.html">trimesh.triangles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.units.html">trimesh.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.util.html">trimesh.util module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.version.html">trimesh.version module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.geometry module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.geometry.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.geometry">
+<span id="trimesh-geometry-module"></span><h1>trimesh.geometry module<a class="headerlink" href="#module-trimesh.geometry" title="Permalink to this headline">¶</a></h1>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.geometry.align_vectors" title="trimesh.geometry.align_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_vectors</span></code></a>(a, b[, return_angle])</p></td>
+<td><p>Find a transform between two 3D vectors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.geometry.faces_to_edges" title="trimesh.geometry.faces_to_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faces_to_edges</span></code></a>(faces[, return_index])</p></td>
+<td><p>Given a list of faces (n,3), return a list of edges (n*3,2)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.geometry.index_sparse" title="trimesh.geometry.index_sparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_sparse</span></code></a>(columns, indices[, data])</p></td>
+<td><p>Return a sparse matrix for which vertices are contained in which faces.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.geometry.mean_vertex_normals" title="trimesh.geometry.mean_vertex_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_vertex_normals</span></code></a>(vertex_count, faces, …)</p></td>
+<td><p>Find vertex normals from the mean of the faces that contain that vertex.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.geometry.plane_transform" title="trimesh.geometry.plane_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plane_transform</span></code></a>(origin, normal)</p></td>
+<td><p>Given the origin and normal of a plane find the transform that will move that plane to be coplanar with the XY plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.geometry.triangulate_quads" title="trimesh.geometry.triangulate_quads"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_quads</span></code></a>(quads)</p></td>
+<td><p>Given a set of quad faces, return them as triangle faces.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.geometry.vector_angle" title="trimesh.geometry.vector_angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vector_angle</span></code></a>(pairs)</p></td>
+<td><p>Find the angles between pairs of unit vectors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.geometry.vertex_face_indices" title="trimesh.geometry.vertex_face_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_face_indices</span></code></a>(vertex_count, faces, …)</p></td>
+<td><p>Find vertex face indices from the faces array of vertices</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.geometry.weighted_vertex_normals" title="trimesh.geometry.weighted_vertex_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weighted_vertex_normals</span></code></a>(vertex_count, faces, …)</p></td>
+<td><p>Compute vertex normals from the faces that contain that vertex.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.geometry.align_vectors">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">align_vectors</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">return_angle=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.align_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a transform between two 3D vectors.</p>
+<p>Implements the method described here:
+<a class="reference external" href="http://ethaneade.com/rot_between_vectors.pdf">http://ethaneade.com/rot_between_vectors.pdf</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em>) – Source vector</p></li>
+<li><p><strong>b</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em>) – Target vector</p></li>
+<li><p><strong>return_angle</strong> (<em>bool</em>) – If True return the angle between the two vectors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>transform</strong> (<em>(4, 4) float</em>) – Homogeneous transform from a to b</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) – Angle between vectors in radians
+Only returned if return_angle</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.faces_to_edges">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">faces_to_edges</code><span class="sig-paren">(</span><em class="sig-param">faces</em>, <em class="sig-param">return_index=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.faces_to_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of faces (n,3), return a list of edges (n*3,2)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em>) – Vertex indices representing faces</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>edges</strong> – Vertex indices representing edges</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n*3, 2) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.index_sparse">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">index_sparse</code><span class="sig-paren">(</span><em class="sig-param">columns</em>, <em class="sig-param">indices</em>, <em class="sig-param">data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.index_sparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a sparse matrix for which vertices are contained in which faces.
+A data vector can be passed which is then used instead of booleans</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>columns</strong> (<em>int</em>) – Number of columns, usually number of vertices</p></li>
+<li><p><strong>indices</strong> (<em>(</em><em>m</em><em>, </em><em>d</em><em>) </em><em>int</em>) – Usually mesh.faces</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>sparse</strong> (<em>scipy.sparse.coo_matrix of shape (columns, len(faces))</em>) – dtype is boolean</p></li>
+<li><p><em>Examples</em> – ———-</p></li>
+<li><p><strong>In [1]</strong> (<em>sparse = faces_sparse(len(mesh.vertices), mesh.faces)</em>)</p></li>
+<li><p><strong>In [2]</strong> (<em>sparse.shape</em>)</p></li>
+<li><p><strong>Out[2]</strong> (<em>(12, 20)</em>)</p></li>
+<li><p><strong>In [3]</strong> (<em>mesh.faces.shape</em>)</p></li>
+<li><p><strong>Out[3]</strong> (<em>(20, 3)</em>)</p></li>
+<li><p><strong>In [4]</strong> (<em>mesh.vertices.shape</em>)</p></li>
+<li><p><strong>Out[4]</strong> (<em>(12, 3)</em>)</p></li>
+<li><p><strong>In [5]</strong> (<em>dense = sparse.toarray().astype(int)</em>)</p></li>
+<li><p><strong>In [6]</strong> (<em>dense</em>)</p></li>
+<li><p><em>Out[6]</em></p></li>
+<li><p><em>array([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],</em> – [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+[0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0],
+[0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1],
+[1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0],
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+[0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1]])</p></li>
+<li><p><strong>In [7]</strong> (<em>dense.sum(axis=0)</em>)</p></li>
+<li><p><strong>Out[7]</strong> (<em>array([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3])</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.mean_vertex_normals">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">mean_vertex_normals</code><span class="sig-paren">(</span><em class="sig-param">vertex_count</em>, <em class="sig-param">faces</em>, <em class="sig-param">face_normals</em>, <em class="sig-param">sparse=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.mean_vertex_normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find vertex normals from the mean of the faces that contain
+that vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertex_count</strong> (<em>int</em>) – The number of vertices faces refer to</p></li>
+<li><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em>) – List of vertex indices</p></li>
+<li><p><strong>face_normals</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Normal vector for each face</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vertex_normals</strong> – Normals for every vertex
+Vertices unreferenced by faces will be zero.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(vertex_count, 3) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.plane_transform">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">plane_transform</code><span class="sig-paren">(</span><em class="sig-param">origin</em>, <em class="sig-param">normal</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.plane_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the origin and normal of a plane find the transform
+that will move that plane to be coplanar with the XY plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em>) – Point that lies on the plane</p></li>
+<li><p><strong>normal</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>float</em>) – Vector that points along normal of plane</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>transform</strong> – Transformation matrix to move points onto XY plane</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(4,4) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.triangulate_quads">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">triangulate_quads</code><span class="sig-paren">(</span><em class="sig-param">quads</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.triangulate_quads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a set of quad faces, return them as triangle faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>quads</strong> (<em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>int</em>) – Vertex indices of quad faces</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>faces</strong> – Vertex indices of triangular faces</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(m, 3) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.vector_angle">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">vector_angle</code><span class="sig-paren">(</span><em class="sig-param">pairs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.vector_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the angles between pairs of unit vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pairs</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Unit vector pairs</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>angles</strong> – Angles between vectors in radians</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.vertex_face_indices">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">vertex_face_indices</code><span class="sig-paren">(</span><em class="sig-param">vertex_count</em>, <em class="sig-param">faces</em>, <em class="sig-param">faces_sparse</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.vertex_face_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find vertex face indices from the faces array of vertices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertex_count</strong> (<em>int</em>) – The number of vertices faces refer to</p></li>
+<li><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em>) – List of vertex indices</p></li>
+<li><p><strong>faces_sparse</strong> (<em>scipy.sparse.COO</em>) – Sparse matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vertex_faces</strong> – Face indices for every vertex
+Array padded with -1 in each row for all vertices with fewer
+face indices than the max number of face indices.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(vertex_count, ) int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.geometry.weighted_vertex_normals">
+<code class="sig-prename descclassname">trimesh.geometry.</code><code class="sig-name descname">weighted_vertex_normals</code><span class="sig-paren">(</span><em class="sig-param">vertex_count</em>, <em class="sig-param">faces</em>, <em class="sig-param">face_normals</em>, <em class="sig-param">face_angles</em>, <em class="sig-param">use_loop=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.geometry.weighted_vertex_normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute vertex normals from the faces that contain that vertex.
+The contibution of a face’s normal to a vertex normal is the
+ratio of the corner-angle in which the vertex is, with respect
+to the sum of all corner-angles surrounding the vertex.</p>
+<p>Grit Thuerrner &amp; Charles A. Wuethrich (1998)
+Computing Vertex Normals from Polygonal Facets,
+Journal of Graphics Tools, 3:1, 43-46</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertex_count</strong> (<em>int</em>) – The number of vertices faces refer to</p></li>
+<li><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>int</em>) – List of vertex indices</p></li>
+<li><p><strong>face_normals</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Normal vector for each face</p></li>
+<li><p><strong>face_angles</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) </em><em>float</em>) – Angles at each vertex in the face</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vertex_normals</strong> – Normals for every vertex
+Vertices unreferenced by faces will be zero.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(vertex_count, 3) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.graph.html" class="btn btn-neutral float-right" title="trimesh.graph module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.exceptions.html" class="btn btn-neutral float-left" title="trimesh.exceptions module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

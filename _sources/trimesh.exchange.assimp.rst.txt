@@ -1,0 +1,7 @@
+trimesh.exchange.assimp module
+==============================
+
+.. automodule:: trimesh.exchange.assimp
+   :members:
+   :undoc-members:
+   :show-inheritance:

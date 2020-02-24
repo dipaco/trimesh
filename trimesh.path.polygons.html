@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.path.polygons module &mdash; trimesh 3.5.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.path.raster module" href="trimesh.path.raster.html" />
+    <link rel="prev" title="trimesh.path.path module" href="trimesh.path.path.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.5.25
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.exchange.html">trimesh.exchange package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.viewer.html">trimesh.viewer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.visual.html">trimesh.visual package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.voxel.html">trimesh.voxel package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+          <li><a href="trimesh.path.html">trimesh.path package</a> &raquo;</li>
+        
+      <li>trimesh.path.polygons module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.path.polygons.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-trimesh.path.polygons">
+<span id="trimesh-path-polygons-module"></span><h1>trimesh.path.polygons module<a class="headerlink" href="#module-trimesh.path.polygons" title="Permalink to this headline">¶</a></h1>
+<p><strong>Functions</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.edges_to_polygons" title="trimesh.path.polygons.edges_to_polygons"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_to_polygons</span></code></a>(edges, vertices)</p></td>
+<td><p>Given an edge list of indices and associated vertices representing lines, generate a list of polygons.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.enclosure_tree" title="trimesh.path.polygons.enclosure_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enclosure_tree</span></code></a>(polygons)</p></td>
+<td><p>Given a list of shapely polygons with only exteriors, find which curves represent the exterior shell or root curve and which represent holes which penetrate the exterior.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.medial_axis" title="trimesh.path.polygons.medial_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">medial_axis</span></code></a>(polygon[, resolution, clip])</p></td>
+<td><p>Given a shapely polygon, find the approximate medial axis using a voronoi diagram of evenly spaced points on the boundary of the polygon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.paths_to_polygons" title="trimesh.path.polygons.paths_to_polygons"><code class="xref py py-obj docutils literal notranslate"><span class="pre">paths_to_polygons</span></code></a>(paths[, scale])</p></td>
+<td><p>Given a sequence of connected points turn them into valid shapely Polygon objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.plot_polygon" title="trimesh.path.polygons.plot_polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_polygon</span></code></a>(polygon[, show])</p></td>
+<td><p>Plot a shapely polygon using matplotlib.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.polygon_hash" title="trimesh.path.polygons.polygon_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polygon_hash</span></code></a>(polygon)</p></td>
+<td><p>Return a vector containing values representitive of a particular polygon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.polygon_obb" title="trimesh.path.polygons.polygon_obb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polygon_obb</span></code></a>(polygon)</p></td>
+<td><p>Find the oriented bounding box of a Shapely polygon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.polygon_scale" title="trimesh.path.polygons.polygon_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polygon_scale</span></code></a>(polygon)</p></td>
+<td><p>For a Polygon object return the diagonal length of the AABB.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.polygons_obb" title="trimesh.path.polygons.polygons_obb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polygons_obb</span></code></a>(polygons)</p></td>
+<td><p>Find the OBBs for a list of shapely.geometry.Polygons</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.random_polygon" title="trimesh.path.polygons.random_polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_polygon</span></code></a>([segments, radius])</p></td>
+<td><p>Generate a random polygon with a maximum number of sides and approximate radius.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.repair_invalid" title="trimesh.path.polygons.repair_invalid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repair_invalid</span></code></a>(polygon[, scale, rtol])</p></td>
+<td><p>Given a shapely.geometry.Polygon, attempt to return a valid version of the polygon through buffering tricks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.resample_boundaries" title="trimesh.path.polygons.resample_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resample_boundaries</span></code></a>(polygon, resolution[, clip])</p></td>
+<td><p>Return a version of a polygon with boundaries resampled to a specified resolution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.sample" title="trimesh.path.polygons.sample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code></a>(polygon, count[, factor, max_iter])</p></td>
+<td><p>Use rejection sampling to generate random points inside a polygon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#trimesh.path.polygons.stack_boundaries" title="trimesh.path.polygons.stack_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack_boundaries</span></code></a>(boundaries)</p></td>
+<td><p>Stack the boundaries of a polygon into a single (n, 2) list of vertices.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#trimesh.path.polygons.transform_polygon" title="trimesh.path.polygons.transform_polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_polygon</span></code></a>(polygon, matrix)</p></td>
+<td><p>Transform a polygon by a a 2D homogeneous transform.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="trimesh.path.polygons.edges_to_polygons">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">edges_to_polygons</code><span class="sig-paren">(</span><em class="sig-param">edges</em>, <em class="sig-param">vertices</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.edges_to_polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an edge list of indices and associated vertices
+representing lines, generate a list of polygons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>edges</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>int</em>) – Indexes of vertices which represent lines</p></li>
+<li><p><strong>vertices</strong> (<em>(</em><em>m</em><em>, </em><em>2</em><em>) </em><em>float</em>) – Vertices in 2D space</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>polygons</strong> – Polygon objects with interiors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(p,) shapely.geometry.Polygon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.enclosure_tree">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">enclosure_tree</code><span class="sig-paren">(</span><em class="sig-param">polygons</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.enclosure_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of shapely polygons with only exteriors,
+find which curves represent the exterior shell or root curve
+and which represent holes which penetrate the exterior.</p>
+<p>This is done with an R-tree for rough overlap detection,
+and then exact polygon queries for a final result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>polygons</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>shapely.geometry.Polygon</em>) – Polygons which only have exteriors and may overlap</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>roots</strong> (<em>(m,) int</em>) – Index of polygons which are root</p></li>
+<li><p><strong>contains</strong> (<em>networkx.DiGraph</em>) – Edges indicate a polygon is
+contained by another polygon</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.medial_axis">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">medial_axis</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">clip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.medial_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a shapely polygon, find the approximate medial axis
+using a voronoi diagram of evenly spaced points on the
+boundary of the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – The source geometry</p></li>
+<li><p><strong>resolution</strong> (<em>float</em>) – Distance between each sample on the polygon boundary</p></li>
+<li><p><strong>clip</strong> (<em>None</em><em>, or </em><em>(</em><em>2</em><em>,</em><em>) </em><em>int</em>) – Clip sample count to min of clip[0] and max of clip[1]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>edges</strong> (<em>(n, 2) int</em>) – Vertex indices representing line segments
+on the polygon’s medial axis</p></li>
+<li><p><strong>vertices</strong> (<em>(m, 2) float</em>) – Vertex positions in space</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.paths_to_polygons">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">paths_to_polygons</code><span class="sig-paren">(</span><em class="sig-param">paths</em>, <em class="sig-param">scale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.paths_to_polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sequence of connected points turn them into
+valid shapely Polygon objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paths</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>sequence</em>) – Of (m, 2) float closed paths</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Approximate scale of drawing for precision</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>polys</strong> – Filled with Polygon or None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(p,) list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.plot_polygon">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">plot_polygon</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">show=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.plot_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a shapely polygon using matplotlib.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Polygon to be plotted</p></li>
+<li><p><strong>show</strong> (<em>bool</em>) – If True will display immediately</p></li>
+<li><p><strong>**kwargs</strong> – Passed to plt.plot</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.polygon_hash">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">polygon_hash</code><span class="sig-paren">(</span><em class="sig-param">polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.polygon_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a vector containing values representitive of
+a particular polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Input geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hashed</strong> – Representitive values representing input polygon</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(6), float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.polygon_obb">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">polygon_obb</code><span class="sig-paren">(</span><em class="sig-param">polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.polygon_obb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the oriented bounding box of a Shapely polygon.</p>
+<p>The OBB is always aligned with an edge of the convex hull of the polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>polygons</strong> (<em>shapely.geometry.Polygon</em>) – Input geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>transform</strong> (<em>(3, 3) float</em>) – Transformation matrix
+which will move input polygon from its original position
+to the first quadrant where the AABB is the OBB</p></li>
+<li><p><strong>extents</strong> (<em>(2,) float</em>) – Extents of transformed polygon</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.polygon_scale">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">polygon_scale</code><span class="sig-paren">(</span><em class="sig-param">polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.polygon_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a Polygon object return the diagonal length of the AABB.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Source geometry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>scale</strong> – Length of AABB diagonal</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.polygons_obb">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">polygons_obb</code><span class="sig-paren">(</span><em class="sig-param">polygons</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.polygons_obb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the OBBs for a list of shapely.geometry.Polygons</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.random_polygon">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">random_polygon</code><span class="sig-paren">(</span><em class="sig-param">segments=8</em>, <em class="sig-param">radius=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.random_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random polygon with a maximum number of sides and approximate radius.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>segments</strong> (<em>int</em>) – The maximum number of sides the random polygon will have</p></li>
+<li><p><strong>radius</strong> (<em>float</em>) – The approximate radius of the polygon desired</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>polygon</strong> – Geometry object with random exterior and no interiors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shapely.geometry.Polygon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.repair_invalid">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">repair_invalid</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">scale=None</em>, <em class="sig-param">rtol=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.repair_invalid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a shapely.geometry.Polygon, attempt to return a
+valid version of the polygon through buffering tricks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Source geometry</p></li>
+<li><p><strong>rtol</strong> (<em>float</em>) – How close does a perimeter have to be</p></li>
+<li><p><strong>scale</strong> (<em>float</em><em> or </em><em>None</em>) – For numerical precision reference</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>repaired</strong> – Repaired polygon</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shapely.geometry.Polygon</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If polygon can’t be repaired</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.resample_boundaries">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">resample_boundaries</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">resolution</em>, <em class="sig-param">clip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.resample_boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a version of a polygon with boundaries resampled
+to a specified resolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Source geometry</p></li>
+<li><p><strong>resolution</strong> (<em>float</em>) – Desired distance between points on boundary</p></li>
+<li><p><strong>clip</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>int</em>) – Upper and lower bounds to clip
+number of samples to avoid exploding count</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>kwargs</strong> – Keyword args for a Polygon constructor <cite>Polygon(**kwargs)</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.sample">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">count</em>, <em class="sig-param">factor=1.5</em>, <em class="sig-param">max_iter=10</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use rejection sampling to generate random points inside a
+polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – Polygon that will contain points</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – Number of points to return</p></li>
+<li><p><strong>factor</strong> (<em>float</em>) – How many points to test per loop</p></li>
+<li><p><strong>max_iter</strong> (<em>int</em>) – Maximum number of intersection checks is:
+&gt; count * factor * max_iter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>hit</strong> – Random points inside polygon
+where n &lt;= count</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 2) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.stack_boundaries">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">stack_boundaries</code><span class="sig-paren">(</span><em class="sig-param">boundaries</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.stack_boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stack the boundaries of a polygon into a single
+(n, 2) list of vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>boundaries</strong> (<em>dict</em>) – With keys ‘shell’, ‘holes’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>stacked</strong> – Stacked vertices</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n, 2) float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.path.polygons.transform_polygon">
+<code class="sig-prename descclassname">trimesh.path.polygons.</code><code class="sig-name descname">transform_polygon</code><span class="sig-paren">(</span><em class="sig-param">polygon</em>, <em class="sig-param">matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.path.polygons.transform_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform a polygon by a a 2D homogeneous transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>polygon</strong> (<em>shapely.geometry.Polygon</em>) – 2D polygon to be transformed.</p></li>
+<li><p><strong>matrix</strong> (<em>(</em><em>3</em><em>, </em><em>3</em><em>) </em><em>float</em>) – 2D homogeneous transformation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> – Polygon transformed by matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>shapely.geometry.Polygon</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.path.raster.html" class="btn btn-neutral float-right" title="trimesh.path.raster module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.path.path.html" class="btn btn-neutral float-left" title="trimesh.path.path module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
